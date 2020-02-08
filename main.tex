@@ -1,0 +1,39 @@
+\documentclass[12pt,twoside,openright]{report}
+
+
+% ===== PAGE LAYOUT
+\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+
+% ===== FIGURES AND CAPTIONS
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+% ===== TEXT FONTS
+\usepackage{anyfontsize}
+\usepackage{xcolor}
+
+\title{Master Thesis}
+\author{Lorenzo Zolfanelli}
+\date{April 2020}
+
+\begin{document}
+
+\pagestyle{empty}
+\input{titlepage}
+
+\newgeometry{width=150mm,top=25mm,bottom=25mm}
+\pagestyle{fancy}
+\setlength{\headheight}{15pt}
+
+\chapter*{Abstract}
+\selectfont
+Abstract goes here
+
+\tableofcontents
+
+\input{chapters/1-introduction}
+%\input{chapters/2-chapter-two}
+
+\end{document}
