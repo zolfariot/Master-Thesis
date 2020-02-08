@@ -6,6 +6,9 @@
 \usepackage[utf8]{inputenc}
 \usepackage{fancyhdr}
 
+% ===== LANGUAGE
+\usepackage[british]{babel}
+
 % ===== FIGURES AND CAPTIONS
 \usepackage{graphicx}
 \graphicspath{ {images/} }
@@ -13,6 +16,11 @@
 % ===== TEXT FONTS
 \usepackage{anyfontsize}
 \usepackage{xcolor}
+\usepackage{siunitx}
+\sisetup{retain-unity-mantissa = false}
+
+% ===== BIBLIOGRAPHY
+\usepackage{cite}
 
 \title{Master Thesis}
 \author{Lorenzo Zolfanelli}
@@ -36,4 +44,6 @@ Abstract goes here
 \input{chapters/1-introduction}
 %\input{chapters/2-chapter-two}
 
+\bibliography{references.bib}{}
+\bibliographystyle{plain}
 \end{document}

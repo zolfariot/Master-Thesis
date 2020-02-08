@@ -1,1 +1,68 @@
 \chapter{Introduction}
+
+% Introduction on the importance of mechanotransduction
+
+
+ %%%%%%%%% %%%%%%%%% %%%%%%%%% %%%%%%%%% %%%%%%%%% %%%%%%%%% %%%%%%%%%
+
+Combining ultra-fast force spectroscopy with single molecule
+fluorescence to characterize \textit{in vitro} the interaction
+kinetics of isolated complexes of few biological molecules.
+
+% between 
+
+\section{Optical Tweezers for Force Spectroscopy}
+
+Optical Tweezers (OT) are instruments that exploit the
+\emph{radiation force} exerted by highly focused Gaussian beams on
+dielectric particles to trap and manipulate microscopic objects with
+sub-nanometric precision.
+
+This technology relies on the large intensity gradient of a focused
+Gaussian beam close to its waist and on the interaction between the
+induced electric dipole of the particle and the beam itself.
+
+An experiment to trap synthetic particles and bacteria with Optical
+Tweezers was first realized by Arthur Ashkin in 1986\cite{Ashkin:86}
+who was eventually awarded with a Nobel Prize in 2018
+\emph{``for the optical tweezers and their application to biological
+systems''}.
+
+In the limit of particles much smaller than the wavelength of the
+incident Gaussian beam, the force exerted on the particles can be
+derived from Maxwell's equations in the Rayleigh regime. The particle
+is thus considered as a point induced electric dipole with a
+polarization vector equals to $\vec{p} = \alpha \vec{E}$, where
+$\alpha$ is the particle polarizability and $\vec{E}$ the electric
+field at the particle position.
+
+The force on a point-like infinitesimal dipole can be derived from
+the Lorentz force law as:
+$$ \vec{F}
+= \left(\vec{p} \cdot \vec{\nabla}\right)\vec{E}
++ \frac{d\vec{p}}{dt} \times \vec{B}
+$$
+Substitution of the polarization vector yields:
+$$ \vec{F} = \alpha
+\left[
+    \left(\vec{E} \cdot \vec{\nabla}\right)\vec{E}
+    + \frac{d\vec{E}}{dt} \times \vec{B}
+\right]
+$$
+Which can be rewritten using Maxwell's equation and vector
+properties as: 
+\begin{equation}
+\label{dipole_force}
+\vec{F}
+= \alpha 
+\left[
+    \frac{1}{2}\nabla E^2
+    + \frac{d}{dt}\left(\vec{E} \times \vec{B}\right)
+\right]
+\end{equation}
+The last term in \ref{dipole_force} is a derivative of a quantity oscillating
+at the optical frequency of the beam (\SI{> 1e14}{\Hz}), thus completely neglectable
+at our force sampling rate.
+This result shows that the dipole force is proportional to the square of the electric
+field, and therefore to the intensity of the incident beam.
+\section{}
