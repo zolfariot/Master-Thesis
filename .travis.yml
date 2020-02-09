@@ -1,0 +1,24 @@
+language: generic
+
+dist: bionic
+
+install:
+    - source ./texlive/texlive_install.sh
+    
+cache:
+    directories:
+        - /tmp/texlive
+        - $HOME/.texlive
+        
+before_script: cd $TRAVIS_BUILD_DIR
+script:
+    # Download required packages
+    - texliveonfly main.tex
+    # Compile everything
+    - latexmk -pdf main.tex
+    
+# Show list of installed packages
+after_script:
+    - export PATH=/tmp/texlive/bin/x86_64-linux:$PATH
+    - tlmgr list --only-installed | grep -oP 'i \K.+?(?=:)'
+    
