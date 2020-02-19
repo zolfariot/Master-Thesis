@@ -1,24 +1,22 @@
 language: generic
-
 dist: bionic
-
 install:
-    - source ./texlive/texlive_install.sh
-    
+- source ./texlive/texlive_install.sh
 cache:
-    directories:
-        - /tmp/texlive
-        - $HOME/.texlive
-        
+  directories:
+  - "/tmp/texlive"
+  - "$HOME/.texlive"
+before_install:
+- openssl aes-256-cbc -K $encrypted_baf79bfacc4c_key -iv $encrypted_baf79bfacc4c_iv
+  -in deploy_key.enc -out deploy_key -d
+- chmod 600 deploy_key
 before_script: cd $TRAVIS_BUILD_DIR
 script:
-    # Download required packages
-    - texliveonfly main.tex
-    # Compile everything
-    - latexmk -pdf main.tex
-    
-# Show list of installed packages
+- texliveonfly main.tex
+- latexmk -pdf main.tex
 after_script:
-    - export PATH=/tmp/texlive/bin/x86_64-linux:$PATH
-    - tlmgr list --only-installed | grep -oP 'i \K.+?(?=:)'
-    
+- export PATH=/tmp/texlive/bin/x86_64-linux:$PATH
+- tlmgr list --only-installed | grep -oP 'i \K.+?(?=:)'
+after_success:
+- rsync -e "ssh -p ${SFTP_PORT} -o StrictHostKeyChecking=no -i./deploy_key" main.pdf ${SFTP_HOST}:${SFTP_PREFIX}_${TRAVIS_BRANCH}_latest.pdf
+- rsync -e "ssh -p ${SFTP_PORT} -o StrictHostKeyChecking=no -i./deploy_key" main.pdf ${SFTP_HOST}:${SFTP_PREFIX}_${TRAVIS_BRANCH}_${TRAVIS_JOB_NUMBER}.pdf
