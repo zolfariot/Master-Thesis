@@ -12,6 +12,8 @@ collection-fontsrecommended
 # LuaTeX
 luaotfload
 
+# PSTricks
+pst-arrow
 
 # texliveonfly does not detect the following packages automatically
 minted fvextra upquote lineno xstring framed caption
