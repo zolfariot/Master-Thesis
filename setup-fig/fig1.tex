@@ -1,0 +1,8 @@
+\begin{pspicture}[showgrid](0,-0.3)(3,3.3)
+\pnode(0,2.5){A}
+\pnode(2,2.5){B}
+\pnode(2,1.5){C}
+\mirror[labelangle=-45](A)(B)(C){M}
+\optbox[position=start,labeloffset=0,labelref=relative](C)(B){Laser 1064 nm}
+\drawbeam(A){1}{2}
+\end{pspicture}
