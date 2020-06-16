@@ -4,21 +4,26 @@
 % ===== PAGE LAYOUT
 \usepackage[a4paper,width=150mm,top=25mm,bottom=25mm]{geometry}
 \usepackage[utf8]{inputenc}
-\usepackage{fancyhdr}
+\usepackage{fancyhdr}   
 
 % ===== LANGUAGE
-\usepackage[british]{babel}
+\usepackage[italian]{babel}
 
 % ===== FIGURES AND CAPTIONS
 \usepackage{graphicx}
 \graphicspath{ {images/} }
-\usepackage{pst-optexp}
+
+% ===== TABLES
+\usepackage{booktabs}
+\usepackage{rotating}
 
 % ===== TEXT FONTS
 \usepackage{anyfontsize}
 \usepackage{xcolor}
 \usepackage{siunitx}
-\sisetup{retain-unity-mantissa = false}
+\sisetup{retain-unity-mantissa = false,
+         list-final-separator = {,},
+         list-units = single}
 
 % ===== BIBLIOGRAPHY
 \usepackage{cite}
@@ -43,8 +48,8 @@ Abstract goes here
 \tableofcontents
 
 \input{chapters/1-introduction}
-%\input{chapters/2-chapter-two}
-\input{setup-fig/fig1}
+\input{chapters/2-methods}
+%\input{setup-fig/fig1}
 
 \bibliography{references.bib}{}
 \bibliographystyle{plain}

@@ -1,56 +1,97 @@
-\chapter{Introduction}
+\chapter{Introduzione}
+
+
+Gli stimoli meccanici rivestono nell'ambito dei sistemi biologici un
+ruolo importante nel determinare il corretto funzionamento di cellule,
+tessuti e organismi complessi.
+
+Mentre tradizionalmente la Biologia si è occupata di
+studiare come processi cellulari e inter-cellulari fossero regolati
+dallo scambio di molecole biologiche, il ruolo degli stimoli
+meccanici è stato a lungo ritenuto marginale nella descrizione di
+questi processi.
+
+Lo sviluppo di tecniche sempre più avanzate e precise per la
+visualizzazione e la manipolazione di molecole all'interno di campioni
+biologici ha iniziato a mutare questa concezione: oggi possiamo
+indagare nel dettaglio il funzionamento dei motori
+molecolari all'interno delle nostre cellule o
+misurare come variazioni nella tensione applicata ad un polimero
+possano indurre una riorganizzazione strutturale nello stesso e 
+cambiarne le proprietà biochimiche.
+
+Per molti processi biologici il ruolo della forza è fondamentale,
+ad esempio nei complessi proteici che legano tra di loro le cellule
+in un tessuto. Questi si comportano come complesse macchine in grado
+di elaborare stimoli di tipo biochimico e meccanico, comunicando e 
+interferendo con il resto delle funzioni cellulari.
+
+Le pinzette ottiche permettono di sondare il comportamento di
+complessi proteici sottoposti a stimoli meccanici variabili, osservando
+ad esempio come questi posssano modulare l'interazione tra due proteine
+diverse. La teoria alla base del loro funzionamento è introdotta nella sezione \ref{sec:ot}.
+
+Quando sono combinate con tecniche ultraveloci per il posizionamento
+delle trappole e il rilevamento degli spostamenti degli oggetti intrappolati le pinzette ottiche consentono la realizzazione di esperimenti di \emph{spettroscopia force-clamp}, approfonditi nella sezione \ref{sec:force_clamp}.
+
+Parallelamente la microscopia ottica ha permesso di descrivere i processi biologici con una precisione sempre maggiore, rendendo possibile la rilevazione e il tracciamento di singole molecole. In particolare
+nell'ambito della microscopia di fluorescenza sono state sviluppate
+tecniche per ricostruire immagini superando il \emph{limite di diffrazione}, per indurre la produzione di proteine fluorescenti grazie
+all'ingegneria genetica, per rendere rilevabile il segnale di singoli fluorofori immobilizzati sopprimendo il rumore di quelli liberi in
+soluzione. La teoria alla base di alcune di queste techniche è introdotta nella sezione \ref{sec:imaging}.
+
+Lo scopo di questa tesi è combinare un sistema di \emph{spettroscopia force-clamp} con un sistema di \emph{imaging di singola molecola} per l'esecuzione di misure in vitro simultanee e sincronizzate.
+
+In questo modo sarà possibile studiare, in un ambiente
+controllato (proteine in soluzione e immobilizzate su microsfere),
+il comportamento di proteine \emph{meccano-sensibili}, unendo alle
+informazioni meccaniche quelle sulla dinamica di interazione
+con altri fattori opportunamente marcarti presenti in soluzione.
+
+
 
 % Introduction on the importance of mechanotransduction
 
 
+
  %%%%%%%%% %%%%%%%%% %%%%%%%%% %%%%%%%%% %%%%%%%%% %%%%%%%%% %%%%%%%%%
 
-Combining ultra-fast force spectroscopy with single molecule
-fluorescence to characterize \textit{in vitro} the interaction
-kinetics of isolated complexes of few biological molecules.
+
 
 % between 
 
-\section{Optical Tweezers for Force Spectroscopy}
+\section{Pinzette ottiche}
+\label{sec:ot}
 
-Optical Tweezers (OT) are instruments that exploit the
-\emph{radiation force} exerted by highly focused Gaussian beams on
-dielectric particles to trap and manipulate microscopic objects with
-sub-nanometric precision.
 
-This technology relies on the large intensity gradient of a focused
-Gaussian beam close to its waist and on the interaction between the
-induced electric dipole of the particle and the beam itself.
+Le pinzette ottiche (o \textit{optical tweezers}, OT) sono strumenti che sfruttano la \emph{forza di radiazione} esercitata da un fascio laser gaussiano altamente focalizzato su materiali dielettrici, in modo da intrappolare e manipolare oggetti microscopici con una precisione sub-nanometrica.
 
-An experiment to trap synthetic particles and bacteria with Optical
-Tweezers was first realized by Arthur Ashkin in 1986\cite{Ashkin:86}
-who was eventually awarded with a Nobel Prize in 2018
-\emph{``for the optical tweezers and their application to biological
-systems''}.
+Questa tecnologia sfrutta il gradiente d'intensità di un fascio gaussiano focalizzato in prossimità del suo \textit{waist} e l'interazione tra il dipolo elettrico indotto nel materiale e il fascio.
 
-In the limit of particles much smaller than the wavelength of the
-incident Gaussian beam, the force exerted on the particles can be
-derived from Maxwell's equations in the Rayleigh regime. The particle
-is thus considered as a point induced electric dipole with a
-polarization vector equals to $\vec{p} = \alpha \vec{E}$, where
-$\alpha$ is the particle polarizability and $\vec{E}$ the electric
-field at the particle position.
+Arthur Ashkin fu, nel 1986, il primo a realizzare sperimentalmente delle pinzette ottiche, riuscendo a intrappolare microsfere sintetiche e batteri\cite{Ashkin:86}. Per questo risultato gli fu conferito il premio Nobel nel 2018, \emph{``per le pinzette ottiche e le loro applicazioni ai sistemi biologici''}.
 
-The force on a point-like infinitesimal dipole can be derived from
-the Lorentz force law as:
+Per descrivere quantitativamente il funzionamento delle pinzette ottiche possiamo considerare l'interazione radiazione-materia nel limite di oggetti molto più piccoli della lunghezza d'onda della radiazione.
+
+In questo limite possiamo considerare il materiale interagente con la radiazione come un dipolo elettrico puntiforme, associato ad una polarizzabilità $\alpha$. Il vettore di polarizzazione nel dipolo puntiforme sarà quindi $\vec{p} = \alpha \vec{E}$.
+
+La forze esercitata su un dipolo elettrico puntiforme può essere ricavata a partire dalle \emph{legge di Lorentz}, ottenendo:
+
 $$ \vec{F} =
   \left( \vec{p} \cdot \vec{\nabla} \right) \vec{E}
   + \frac{d\vec{p}}{dt} \times \vec{B}
 $$
-Substitution of the polarization vector yields:
+
+Ovvero, una volta sostituito il vettore di polarizzazione:
+
 $$ \vec{F} = \alpha
 \left[
     \left( \vec{E} \cdot \vec{\nabla} \right) \vec{E}
     + \frac{d\vec{E}}{dt} \times \vec{B}
 \right]
 $$
-Which can be rewritten using Maxwell's equation and vector
-properties as: 
+
+E infine, tenendo conto delle \emph{equazioni di Maxwell} e dell'algebra dei vettori:
+
 \begin{equation}
 \label{dipole_force}
 \vec{F}
@@ -60,11 +101,11 @@ properties as:
     + \frac{d}{dt}\left(\vec{E} \times \vec{B}\right)
 \right]
 \end{equation}
-The last term in \ref{dipole_force} is a derivative of a quantity
-oscillating at the optical frequency of the beam (\SI{> 1e14}{\Hz}),
-thus completely neglectable at our force sampling rate.
-This result shows that the dipole force is proportional to the square
-of the electric field, and therefore to the intensity of the incident
-beam.
 
-\section{}
+Questa ultima forma (equazione \ref{dipole_force}) ci permette di mettere in evidenza il termine $\frac{d}{dt}(\vec{E} \times \vec{B})$, ovvero la derivata temporale di una quantità oscillante alla stessa frequenza ottica del fascio laser (\SI{> 1e14}{\Hz}).
+
+Confrontando questo valore con la frequenza con cui riusciamo a campionare sperimentalmente il valore della forza risulta accurato considerare questa quantità costante, e quindi trascurare il secondo termine.
+
+
+\section{Spettroscopia force-clamp}
+
