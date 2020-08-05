@@ -1,3 +1,5 @@
+ %%%%%%%%% %%%%%%%%% %%%%%%%%% %%%%%%%%% %%%%%%%%% %%%%%%%%% %%%%%%%%%
+
 \chapter{Introduzione}
 
 
@@ -5,7 +7,7 @@ Gli stimoli meccanici rivestono nell'ambito dei sistemi biologici un
 ruolo importante nel determinare il corretto funzionamento di cellule,
 tessuti e organismi complessi.
 
-Mentre tradizionalmente la Biologia si è occupata di
+Mentre tradizionalmente la biologia si è occupata di
 studiare come processi cellulari e inter-cellulari fossero regolati
 dallo scambio di molecole biologiche, il ruolo degli stimoli
 meccanici è stato a lungo ritenuto marginale nella descrizione di
@@ -14,31 +16,47 @@ questi processi.
 Lo sviluppo di tecniche sempre più avanzate e precise per la
 visualizzazione e la manipolazione di molecole all'interno di campioni
 biologici ha iniziato a mutare questa concezione: oggi possiamo
-indagare nel dettaglio il funzionamento dei motori
-molecolari all'interno delle nostre cellule o
-misurare come variazioni nella tensione applicata ad un polimero
-possano indurre una riorganizzazione strutturale nello stesso e 
-cambiarne le proprietà biochimiche.
+indagare nel dettaglio il funzionamento dei motori molecolari
+all'interno delle nostre cellule o misurare come variazioni nella
+tensione applicata a un polimero possano indurre una riorganizzazione
+strutturale nello stesso e cambiarne le proprietà biochimiche.
 
 Per molti processi biologici il ruolo della forza è fondamentale,
 ad esempio nei complessi proteici che legano tra di loro le cellule
-in un tessuto. Questi si comportano come complesse macchine in grado
-di elaborare stimoli di tipo biochimico e meccanico, comunicando e 
-interferendo con il resto delle funzioni cellulari.
+in un tessuto, le \emph{giunzioni cellulari}.
+Queste si comportano come complesse macchine in grado di elaborare
+stimoli di tipo biochimico e meccanico, comunicando e interferendo
+con le funzioni del resto della cellula.
+Esistono diversi tipi di giunzioni cellulari, responsabili di
+specifiche funzioni e caratterizzate dalla reciproca interazione di
+diversi tipi di proteine. La dinamica della loro interazione viene
+modificata e modulata dalle sollecitazioni meccaniche esterne,
+permettendo alle giunzioni in \emph{trasduttori} di segnali meccanici.
 
 Le pinzette ottiche permettono di sondare il comportamento di
-complessi proteici sottoposti a stimoli meccanici variabili, osservando
-ad esempio come questi posssano modulare l'interazione tra due proteine
-diverse. La teoria alla base del loro funzionamento è introdotta nella sezione \ref{sec:ot}.
+complessi proteici sottoposti a stimoli meccanici variabili,
+osservando
+ad esempio come questi posssano modulare l'interazione tra due
+proteine diverse. La teoria alla base del loro funzionamento è
+introdotta nella sezione \ref{sec:ot}.
 
 Quando sono combinate con tecniche ultraveloci per il posizionamento
-delle trappole e il rilevamento degli spostamenti degli oggetti intrappolati le pinzette ottiche consentono la realizzazione di esperimenti di \emph{spettroscopia force-clamp}, approfonditi nella sezione \ref{sec:force_clamp}.
+delle trappole e il rilevamento degli spostamenti degli oggetti
+intrappolati le pinzette ottiche consentono la realizzazione di
+esperimenti di \emph{spettroscopia force-clamp}, approfonditi nella
+sezione \ref{sec:force_clamp}.
 
-Parallelamente la microscopia ottica ha permesso di descrivere i processi biologici con una precisione sempre maggiore, rendendo possibile la rilevazione e il tracciamento di singole molecole. In particolare
-nell'ambito della microscopia di fluorescenza sono state sviluppate
-tecniche per ricostruire immagini superando il \emph{limite di diffrazione}, per indurre la produzione di proteine fluorescenti grazie
-all'ingegneria genetica, per rendere rilevabile il segnale di singoli fluorofori immobilizzati sopprimendo il rumore di quelli liberi in
-soluzione. La teoria alla base di alcune di queste techniche è introdotta nella sezione \ref{sec:imaging}.
+Parallelamente la microscopia ottica ha permesso di descrivere i
+processi biologici con una precisione sempre maggiore, rendendo
+possibile la rilevazione e il tracciamento di singole molecole.
+In particolare nell'ambito della microscopia di fluorescenza sono
+state sviluppate tecniche per ricostruire immagini superando il
+\emph{limite di diffrazione}, per indurre la produzione di proteine
+fluorescenti grazie all'ingegneria genetica, per rendere rilevabile
+il segnale di singoli fluorofori immobilizzati sopprimendo il rumore
+di quelli liberi in soluzione.
+La teoria alla base di alcune di queste techniche è introdotta
+nella sezione \ref{sec:imaging}.
 
 Lo scopo di questa tesi è combinare un sistema di \emph{spettroscopia force-clamp} con un sistema di \emph{imaging di singola molecola} per l'esecuzione di misure in vitro simultanee e sincronizzate.
 
@@ -66,24 +84,64 @@ con altri fattori opportunamente marcarti presenti in soluzione.
 
 Le pinzette ottiche (o \textit{optical tweezers}, OT) sono strumenti che sfruttano la \emph{forza di radiazione} esercitata da un fascio laser gaussiano altamente focalizzato su materiali dielettrici, in modo da intrappolare e manipolare oggetti microscopici con una precisione sub-nanometrica.
 
-Questa tecnologia sfrutta il gradiente d'intensità di un fascio gaussiano focalizzato in prossimità del suo \textit{waist} e l'interazione tra il dipolo elettrico indotto nel materiale e il fascio.
+Questa tecnologia sfrutta il gradiente d'intensità di un fascio
+gaussiano focalizzato interagente con particelle dielettriche immerse
+in un fluido. L'interazione delle particelle con la radiazione fa si
+che queste risentano di una forza di richiamo verso una posizione
+di equilibrio in prossimità del fuoco del fascio.
 
 Arthur Ashkin fu, nel 1986, il primo a realizzare sperimentalmente delle pinzette ottiche, riuscendo a intrappolare microsfere sintetiche e batteri\cite{Ashkin:86}. Per questo risultato gli fu conferito il premio Nobel nel 2018, \emph{``per le pinzette ottiche e le loro applicazioni ai sistemi biologici''}.
 
-Per descrivere quantitativamente il funzionamento delle pinzette ottiche possiamo considerare l'interazione radiazione-materia nel limite di oggetti molto più piccoli della lunghezza d'onda della radiazione.
+Per descrivere quantitativamente il funzionamento delle pinzette
+ottiche consideriamo in generale l'effetto dell'interazione tra
+una microsfera dielettrica, immersa in una soluzione liquida, e
+la radiazione elettromagnetica prodotta da un fascio laser gaussiano
+focalizzato.
 
-In questo limite possiamo considerare il materiale interagente con la radiazione come un dipolo elettrico puntiforme, associato ad una polarizzabilità $\alpha$. Il vettore di polarizzazione nel dipolo puntiforme sarà quindi $\vec{p} = \alpha \vec{E}$.
+In generale la forza a cui è soggetta la microsfera interagente
+col campo elettromagnetico può essere scomposta in due contributi:
 
-La forze esercitata su un dipolo elettrico puntiforme può essere ricavata a partire dalle \emph{legge di Lorentz}, ottenendo:
+\begin{itemize}
+    \item La \textbf{forza di \textit{scattering}} o pressione di radiazione, sempre orientata nella direzione di propagazione
+    della radiazione e proporzionale alla sua intesità.
+    \item La \textbf{forza di dipolo} o gradiente, proporzionale
+    al gradiente d'intensità della radiazione elettromagnetico.
+\end{itemize}
 
-$$ \vec{F} =
+L'origine di questi due contributi e la dipenza dalle caratteristiche
+della microsfera e del liquido utilizzati possono essere derivate
+analiticamente dalle equazioni di Maxwell nei limiti del regime
+di Rayleigh, ovvero quando le dimensioni della sfera sono molto
+inferiori alla lunghezza d'onda della radiazione utilizzata.
+
+In questo limite possiamo considerare il materiale interagente con la
+radiazione come un dipolo elettrico puntiforme, associato ad una
+polarizzabilità $\alpha$. Il vettore di polarizzazione nel dipolo puntiforme sarà quindi $\vec{p} = \alpha \vec{E}$.
+
+La pressione di radiazione sarà quindi proporzionale all'impulso
+dei fotoni retrodiffusi per \textit{scattering} Rayleigh.
+Nel caso di una microsfera di raggio $a$, indice di rifrazione $n$,
+immersa in un fluido con indice di rifrazione $m$, la forza di
+\textit{scattering} può essere espressa\cite{HARADA1996529} come:
+
+\begin{equation}
+\vec{F}_r = \hat{k} \frac{8 \pi n k^4 a^6}{3c}
+\left(
+\frac{(n/m)^2 - 1}{(n/m)^2 + 2}
+\right)^2
+\end{equation}
+
+L'espressione della forza gradiente può essere ottenuta dall'interazione
+lorentziana tra la radiazione e il dipolo puntiforme:
+L
+$$ \vec{F}_g =
   \left( \vec{p} \cdot \vec{\nabla} \right) \vec{E}
   + \frac{d\vec{p}}{dt} \times \vec{B}
 $$
 
 Ovvero, una volta sostituito il vettore di polarizzazione:
 
-$$ \vec{F} = \alpha
+$$ \vec{F}_g = \alpha
 \left[
     \left( \vec{E} \cdot \vec{\nabla} \right) \vec{E}
     + \frac{d\vec{E}}{dt} \times \vec{B}
@@ -94,7 +152,7 @@ E infine, tenendo conto delle \emph{equazioni di Maxwell} e dell'algebra dei vet
 
 \begin{equation}
 \label{dipole_force}
-\vec{F}
+\vec{F_g}
 = \alpha 
 \left[
     \frac{1}{2}\nabla E^2
@@ -102,10 +160,51 @@ E infine, tenendo conto delle \emph{equazioni di Maxwell} e dell'algebra dei vet
 \right]
 \end{equation}
 
-Questa ultima forma (equazione \ref{dipole_force}) ci permette di mettere in evidenza il termine $\frac{d}{dt}(\vec{E} \times \vec{B})$, ovvero la derivata temporale di una quantità oscillante alla stessa frequenza ottica del fascio laser (\SI{> 1e14}{\Hz}).
+Questa ultima forma (equazione \ref{dipole_force}) ci permette di mettere in evidenza il termine $\frac{d}{dt}(\vec{E} \times \vec{B})$, ovvero la derivata temporale di una quantità oscillante molto rapidamente (\SI{> 1e14}{\Hz}), che
+può tranquillamente essere considerata costante se confrontata con in tempi
+tipici dell'evoluzione meccanica del sistema. Il secondo termine può quindi
+essere trascurato e, sostituendo ad $\alpha$ l'espressione per la polarizzabilità
+della microsfera otteniamo:
 
-Confrontando questo valore con la frequenza con cui riusciamo a campionare sperimentalmente il valore della forza risulta accurato considerare questa quantità costante, e quindi trascurare il secondo termine.
+\begin{equation}
+    \vec{F}_g = 
+    \frac{2\pi n a^3}{c}
+    \left(
+    \frac{(n/m)^2 - 1}{(n/m)^2 + 2}
+    \right)
+    \nabla I(\vec{r})
+\end{equation}
+
+Il risultato netto dei due contributi è che la microsfera tendera ad occupare una
+posizione di equilibrio nel punto in cui i due contributi si cancellano e, se
+perturbata, risentirà di una forza di richiamo verso la posizione di equilibrio.
+
+Una risultato qualitativamente identico è dimostrabile nel limite dell'ottica
+geometrica, quando la particella è al contrario di dimensioni molto maggiori
+alla lunghezza d'onda intermedia.
+
+Il caso intermedio richiede l'uso della più complessa teoria Lorenz-Mie e spesso
+il ricorso a soluzioni numeriche, ma l'idea qualitativa alla base
+dell'intrappolamento resta valida.
+
+Nel caso generale i requisiti per un intrappolamento efficace sono quelli di avere
+una forza di gradiente maggiore di quella di scattering e una energia cinetica
+delle particelle intrappolate sufficientemente bassa (quindi un fluido sufficientemente viscoso).
+
+Per le nostre applicazioni è sufficiente considerare una forza di richiamo del tipo 
+
+\begin{equation}
+    \vec{F} = -k(\vec{x}-\vec{x}_{eq})
+\end{equation}
+
+Il valore di $k$ per una certa trappola ottica, come vedremo, può essere
+determinato attraverso un'apposita procedura di calibrazione che sfrutta
+la diffusione della microsfera all'interno della trappola.
+
+
+
 
 
 \section{Spettroscopia force-clamp}
 
+\section{\textit{Imaging} di singola molecola}
