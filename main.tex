@@ -4,7 +4,15 @@
 % ===== PAGE LAYOUT
 \usepackage[a4paper,width=150mm,top=25mm,bottom=25mm]{geometry}
 \usepackage[utf8]{inputenc}
-\usepackage{fancyhdr}   
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{2pt}
+\fancyhf[lh,rh,ch]{}
+\fancyhf[leh]{\leftmark}
+\fancyhf[roh]{\rightmark}
+
+\usepackage{titlesec}
+\newcommand{\sectionbreak}{\clearpage}
 
 % ===== LANGUAGE
 \usepackage[italian]{babel}
@@ -50,6 +58,9 @@ Abstract goes here
 \input{chapters/1-introduction}
 \input{chapters/2-methods}
 %\input{setup-fig/fig1}
+
+\appendix
+\input{chapters/A1-AJ_network}
 
 \bibliography{references.bib}{}
 \bibliographystyle{plain}
